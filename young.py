@@ -113,9 +113,7 @@ def extract_subpermutations(perm, length=4):
     Extract all subsequences of length 4 where the indices satisfy i < j < k < l.
     """
     subperms = []
-    # 使用 itertools.combinations 获取所有四元组
     for indices in itertools.combinations(range(len(perm)), length):
-        # 提取对应位置的元素
         subperm = [perm[i] for i in indices]
         subperms.append(subperm)
     return subperms
